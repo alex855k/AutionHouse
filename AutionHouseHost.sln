@@ -1,0 +1,34 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.26430.14
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AutionHouseHost", "AutionHouseHost\AutionHouseHost.csproj", "{D82D5D7B-5C7E-4568-A4FC-20466B04D920}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BidderClient", "BidderClient\BidderClient.csproj", "{248A9CD8-2373-4A5C-AFCF-4D2F982A24DD}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AuctionHouseLibrary", "ClassLibrary1\AuctionHouseLibrary.csproj", "{A0FE2EC8-1B40-4053-AD44-987D41ECB451}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{D82D5D7B-5C7E-4568-A4FC-20466B04D920}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D82D5D7B-5C7E-4568-A4FC-20466B04D920}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D82D5D7B-5C7E-4568-A4FC-20466B04D920}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D82D5D7B-5C7E-4568-A4FC-20466B04D920}.Release|Any CPU.Build.0 = Release|Any CPU
+		{248A9CD8-2373-4A5C-AFCF-4D2F982A24DD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{248A9CD8-2373-4A5C-AFCF-4D2F982A24DD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{248A9CD8-2373-4A5C-AFCF-4D2F982A24DD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{248A9CD8-2373-4A5C-AFCF-4D2F982A24DD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A0FE2EC8-1B40-4053-AD44-987D41ECB451}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A0FE2EC8-1B40-4053-AD44-987D41ECB451}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A0FE2EC8-1B40-4053-AD44-987D41ECB451}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A0FE2EC8-1B40-4053-AD44-987D41ECB451}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
