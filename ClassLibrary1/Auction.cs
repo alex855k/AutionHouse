@@ -1,9 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
 using System.Threading;
-using System.Threading.Tasks;
 
 namespace ClassLibrary1
 {
@@ -39,7 +37,7 @@ namespace ClassLibrary1
 
         private void StartTimer()
         {
-           Console.WriteLine("Auction has begun");
+            Console.WriteLine("Auction has begun");
         }
 
         public Bid HighestBid
@@ -47,18 +45,18 @@ namespace ClassLibrary1
             get
             {
                 return _bids.Find(bt => bt.Amount == _bids.Max(b => b.Amount));
-                
+
             }
         }
 
-        public List<IObse> Observers { get; set; }
+        //public List<IObse> Observers { get; set; }
 
         public Auction(Item item, string auctionDescription, double minimumBid)
         {
             Item = item;
             AuctionDescription = auctionDescription;
             _minimumBid = minimumBid;
-            AuctionName = "Auction for " + item.Name + "#"+ item.ID;
+            AuctionName = "Auction for " + item.Name + "#" + item.ID;
         }
 
         public Auction(Item item, string auctionDescription, double minimumBid, int auctionTime, string auctionName)
@@ -73,19 +71,19 @@ namespace ClassLibrary1
         public bool CanMakeBid(double bidValue)
         {
             bool canMakeBid = false;
-            if(bidValue > _minimumBid)
+            if (bidValue > _minimumBid)
             {
                 Bid highest = HighestBid;
                 if (highest != null)
                 {
                     if (highest.Amount < bidValue)
-                    {   
+                    {
                         canMakeBid = true;
-                    }   
+                    }
                 }
                 else
                 {
-                      canMakeBid = true;
+                    canMakeBid = true;
                 }
             }
             return canMakeBid;

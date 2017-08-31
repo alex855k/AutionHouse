@@ -1,9 +1,6 @@
-﻿using System;
+﻿using ClassLibrary1;
+using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using ClassLibrary1;
 
 namespace AutionHouseHost
 {
@@ -19,5 +16,15 @@ namespace AutionHouseHost
         {
             //Parallel.ForEach(args.Auction.Observers, b => b.)
         }
+
+        public static void SendAll(string messageToAll)
+        {
+            foreach (Client c in Clients)
+            {
+                c.SendMessage(messageToAll);
+            }
+        }
+
+        public static List<Client> Clients { get; set; }
     }
 }
