@@ -17,5 +17,10 @@ namespace AutionHouseHost
             writer = new StreamWriter(client.GetStream());
             this.clientName = clientName;
         }
+
+        public void SendMessage(string msg)
+        {
+            writer.WriteLine();
+        }
     }
 }

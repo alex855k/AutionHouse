@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 
 namespace ClassLibrary1
@@ -10,15 +11,36 @@ namespace ClassLibrary1
     {
         private readonly double _minimumBid = 100;
         private double _highestBidValue = 0;
-        public int AuctionTime { get; private set; } = 10;
+        public int AuctionTime { get; } = 10;
         public List<Bid> _bids = new List<Bid>();
         public string AuctionName { get; }
-
-        public int AuctionId { get; } = 1;
-
+        private static int auctionId = 0;
+        public int AuctionId { get; }
         public string AuctionDescription { get; }
-
         public Item Item { get; set; }
+        private Thread AuctionThread;
+
+        public Auction(string name)
+        {
+            AuctionId = auctionId++;
+            AuctionName = name;
+            AuctionThread = new Thread(Run);
+        }
+
+        private void Run()
+        {
+            StartTimer();
+            while (true)
+            {
+                Console.WriteLine("auction number" + auctionId + " " + AuctionName);
+                Thread.Sleep(1000);
+            }
+        }
+
+        private void StartTimer()
+        {
+           Console.WriteLine("Auction has begun");
+        }
 
         public Bid HighestBid
         {
@@ -28,6 +50,8 @@ namespace ClassLibrary1
                 
             }
         }
+
+        public List<IObse> Observers { get; set; }
 
         public Auction(Item item, string auctionDescription, double minimumBid)
         {
@@ -76,7 +100,7 @@ namespace ClassLibrary1
 
         public void EndAuction()
         {
-            Item 
+
         }
 
     }
